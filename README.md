@@ -24,9 +24,8 @@
     ```
 
 ***Encountering non-numeric values***
-* Aside from missing values and duplicates, seems like I've skipped over some rows that contains non-numeric values on a column that is meant to only contain numerical values causing problems later on the coding
+* Aside from missing values and duplicates, seems like I've skipped over some rows that contains non-numeric values on a column that is meant to only contain numerical values causing problems later on the coding. This issue causes ineffecient use of time, being forced to deal with setting up the spreadsheet once again
 * e.g.: ![image](https://github.com/user-attachments/assets/419da2ca-2665-4087-8833-22b15d682319)
-* This issue causes ineffecient use of time, being forced to deal with setting up the spreadsheet once again
   - Solution 🔧: Keeping the data cleaning notebook for quick fixes
 
 
