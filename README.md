@@ -1,7 +1,9 @@
 # ECE2112-Python-Exploratory_Data_Analysis
 
 
+
 # Insights Gained 🔍
+
 
 
 # Challenges 🎯
@@ -21,6 +23,12 @@
     dataset = pd.read_csv(new_path, encoding='cp1252')
     ```
 
+***Encountering non-numeric values***
+* Aside from missing values and duplicates, seems like I've skipped over some rows that contains non-numeric values on a column that is meant to only contain numerical values causing problems later on the coding
+* e.g.: ![image](https://github.com/user-attachments/assets/419da2ca-2665-4087-8833-22b15d682319)
+* This issue causes ineffecient use of time, being forced to deal with setting up the spreadsheet once again
+  - Solution 🔧: Keeping the data cleaning notebook for quick fixes
+
 
 
 # History 📜
@@ -31,9 +39,12 @@
 * Version 2.0 (11/03/24)
   - Used a new and cleaned spreadsheet data
   - Also included the Data Cleaning notebook
+  - Also included the spreadsheet used
 * Version 2.1 (11/04/24)
   - Changed a line of code that replaces blank entries from the 'key' column due to issues by adding " ", right and before the 'N/A'.
   - Originally was:
     ```javascript
     dataset['key'] = dataset['key'].fillna('N/A')
     ```
+* Version 2.2 (11/04/24)
+  - Added the following line of code
