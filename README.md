@@ -33,7 +33,7 @@
   - Also included the Data Cleaning notebook
 * Version 2.1 (11/04/24)
   - Changed a line of code that replaces blank entries from the 'key' column due to issues by adding " ", right and before the 'N/A'.
-  - Originally was
+  - Originally was:
     ```javascript
     dataset['key'] = dataset['key'].fillna('N/A')
     ```
