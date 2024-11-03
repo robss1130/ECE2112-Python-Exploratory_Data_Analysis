@@ -43,7 +43,11 @@
   - Changed a line of code that replaces blank entries from the 'key' column due to issues by adding " ", right and before the 'N/A'.
   - Changed to:
     ```javascript
-    dataset['key'] = dataset['key'].fillna('"N/A"')  # Originally was dataset['key'] = dataset['key'].fillna('N/A')
+    dataset['key'] = dataset['key'].fillna('"N/A"')
+    ```
+  - Originally was:
+    ```javascript
+    dataset['key'] = dataset['key'].fillna('N/A')
     ```
 * Version 2.2 (11/04/24)
   - Added the following line of code to deal with non-numeric values in the 'streams' column of row 574
