@@ -24,21 +24,21 @@
     ```
 
 ***Encountering non-numeric values***
-* Aside from missing values and duplicates, seems like I've skipped over some rows that contains non-numeric values on a column that is meant to only contain numerical values causing problems later on the coding. This issue causes ineffecient use of time, being forced to deal with setting up the spreadsheet once again
+* Aside from missing values and duplicates, seems like I've skipped over some rows that contains non-numeric values on a column that is meant to only contain numerical values causing problems later on the coding. This issue causes ineffecient use of time, being forced to deal with setting up the spreadsheet once again.
 * e.g.: ![image](https://github.com/user-attachments/assets/419da2ca-2665-4087-8833-22b15d682319)
-  - Solution 🔧: Keeping the data cleaning notebook for quick fixes
+  - Solution 🔧: Keeping the data cleaning notebook for quick fixes.
 
 
 
 # History 📜
 * Version 1.0 (11/02/24)
-  - Initial commit of the notebook
-  - Overview of Dataset
+  - Initial commit of the notebook.
+  - Overview of Dataset.
 
 * Version 2.0 (11/03/24)
-  - Used a new and cleaned spreadsheet data
-  - Also included the Data Cleaning notebook
-  - Also included the spreadsheet used
+  - Used a new and cleaned spreadsheet data.
+  - Also included the Data Cleaning notebook.
+  - Also included the spreadsheet used.
 * Version 2.1 (11/04/24)
   - Changed a line of code that replaces blank entries from the 'key' column due to issues by adding " ", right and before the 'N/A'.
   - Changed to:
@@ -50,7 +50,8 @@
     dataset['key'] = dataset['key'].fillna('N/A')
     ```
 * Version 2.2 (11/04/24)
-  - Added the following line of code to deal with non-numeric values in the 'streams' column of row 574
+  - Added the following line of code to deal with non-numeric values in the 'streams' column of row 574.
     ```javascript
     cleaned_dataset.loc[574, 'streams'] = 0
     ```
+  - Uploaded the updated Data_Cleaning notebook and updated cleaned spreadsheet.
