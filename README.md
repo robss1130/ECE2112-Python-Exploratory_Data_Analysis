@@ -50,6 +50,7 @@
     dataset['key'] = dataset['key'].fillna('N/A')
     ```
 * Version 2.2 (11/04/24)
+  - Updated the main notebook by adding some graph to show mean, median, and standard deviation of the 'streams'.
   - Added the following line of code to deal with non-numeric values in the 'streams' column of row 574.
     ```javascript
     cleaned_dataset.loc[574, 'streams'] = 0
