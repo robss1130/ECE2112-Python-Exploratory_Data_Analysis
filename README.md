@@ -12,6 +12,9 @@
 ***Spreadsheet Loading Error***⁴⁰⁴
 * Upon trying to load the spreadsheet, I was greeted with the following error:
 ![image](https://github.com/user-attachments/assets/e0d61703-32f5-4b8d-b5ab-4d0ab49f3118)
+  - Solution ✅: Specify the encoding when loading the csv file into something that python would understand, in my case I used 'cp1252'.
+    ![image](https://github.com/user-attachments/assets/00215df2-c981-460b-99e7-97e5f3077497)
+
 
 
 # History 📜
