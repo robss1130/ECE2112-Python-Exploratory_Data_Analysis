@@ -16,7 +16,7 @@
     ```
 - Apparently, filling the entries with 'N/A' still resulted in the data containing once loaded from a different notebook but different output was printed once I changed it to '"N/A"'. Upon searching the web, 'N/A' and '"N/A"' should both be treated a non null value despite the other being a string value as 'NaN' is distinct from 'N/A'. What seems to be causing this issue is still unknown but is assumed to be due to the version of the spreadsheet file. ❗Note: This line is to be updated once a strong, credible, and appropriate/related information is stumbled upon.
 
-- While trying to create and generate some graphs, I stumble an issue where it cannot be fixed. The only way I was able to fix it is by restarting my computer. 
+- While trying to create and generate some graphs, I stumble an issue where it cannot be fixed. The only way I was able to fix it is by restarting my computer. According to some articles, this may be due to an issue in some of the states of the variable I've initialized. Sometimes, variables are not being reset properly or if previous computations have affected the current state, which can lead to NaN issues. By restarting the PC, the Python reloads all the libraries. It may also be due to the system resources becoming more strained. Hence, restarting the machine fixes the issue.
 
 
 ## Challenges 🎯
