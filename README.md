@@ -41,7 +41,7 @@
 * e.g.: ![image](https://github.com/user-attachments/assets/419da2ca-2665-4087-8833-22b15d682319)
   - Solution 🔧: Keeping the data cleaning notebook for quick fixes.
 
-***Null values*** ¯\_(ツ)_/¯
+***Null values***  ¯\_(ツ)_/¯
 * Upon filling the empty entries of 'key' column with 'N/A' whilst using the Data_Cleaning.ipynb notebook and running a `.isnull()` code to check if there are still null values, I was greeted with a display of false. But once after the spreadsheet was saved and loaded into the main notebook, the 'key' column tested positive for containing null values.
 ![image](https://github.com/user-attachments/assets/0f96fbe1-6ae2-4504-aae9-67ef558f7399)
   - Solution 🔧: filled the missing entries with '"N/A"' instead. Using string value seems to fix the issue.
