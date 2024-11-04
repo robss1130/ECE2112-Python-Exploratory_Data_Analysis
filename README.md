@@ -85,5 +85,10 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: A
     ```
   - Uploaded the updated Data_Cleaning notebook and updated cleaned spreadsheet.
  
+* Version 3.0 (11/05/24)
+  - Major addition of codes.
+  - Newly generated graphs were added to answer and present some questions of the guide question.
+  - Simplified some codes to remove redundancy.
+ 
   ## References 🔗
   - Rubin, D. B. (1976). Inference and missing data. Biometrika, 63(3), 581-592. https://doi.org/10.1093/biomet/63.3.581
