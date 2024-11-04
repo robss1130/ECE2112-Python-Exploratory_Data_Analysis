@@ -2,10 +2,13 @@
 
 
 
-## Insights Gained 🔍
+##Write-up & Insights Gained 🔍
 - When using data files in coding using python, I learned that not all files and encoding methods are compatible which leads to errors when reading files. Upon researching about it, it's because some data uses special characters that may cause issue to the programming language. An example is Python's Pandas lilbrary defaults to UTF-8 encoding, but the spreadsheet file that were using seems to not be compatible therefore I have to use an encoding compatible and chose 'cp1252' which made my code run as long as the data I'll be loading does not contain characters outside the Western European character set.
 
 - Upon performing data cleaning, one of the issue that I stumbled upon is creating a line of code that would easily check entries of the data set at which it has a missing value. Prior to this, as I initially performed the activity with unaltered version of the spreadsheet containing some garbage values, I was able to see that 2 columns of the spreadsheet seems to contain missing values. I begun started with the 'in_shazam_carts' column and had no idea how identify missing values. Upon surfing the internet, I came to learn about the `.isna()` code which when used, basically checks for "NaN" values. Checking for "NaN" would be the logical thing to do since the column is specifically catered to numerical values. Hence: `dataset[dataset['in_shazam_charts'].isna()==1]`
+
+- For the songs with duplicates, songs with the same track name and artist name, were simply dropped as they basically just cause issue on the data. Although, I kept the first occurence of the song as upon checking the numbers, it seems that the later occurence were just the outdated data of that songs performance. This was done using `.duplicated(subset=['track_name', 'artist(s)_name'], keep=False)]` where `.duplicated()` basically checks and returns a value of True when a row is duplicated and False if it is unique. `subset=['track_name', 'artist(s)_name']` is basically a parameter to specify which columns to look for duplicate. Lastly, `keep=False` is used in order to mark the first instance of a song with duplicate at later instances to be True, as without it, the compiler seems to instruct to mark songs as a duplicate once it had a first encounter but never include it as a 'duplicate'.
+- `.drop_duplicates(subset=['track_name', 'artist(s)_name'], keep='first')` is used to finally drop the duplicates. `.drop_duplicates` will basically drop those songs that contain the same track name and artist name and to keep the first occurence which `keep='first'` comes into play.
 
 
 ## Challenges 🎯
