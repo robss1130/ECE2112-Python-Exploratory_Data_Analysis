@@ -1,4 +1,4 @@
-# ECE2112-Python-Exploratory_Data_Analysis 📊📈🗂🗃️🐍
+# ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
 
 
 
@@ -91,4 +91,4 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: A
   - Simplified some codes to remove redundancy.
  
   ## References 🔗
-  - Rubin, D. B. (1976). Inference and missing data. Biometrika, 63(3), 581-592. https://doi.org/10.1093/biomet/63.3.581
+  - Rubin, D. B. (1976). Inference and missing data. Biometrika, 63(3), 581-592. - [https://doi.org/10.1093/biomet/63.3.581](https://sci-hub.st/10.1093/biomet/63.3.581)
