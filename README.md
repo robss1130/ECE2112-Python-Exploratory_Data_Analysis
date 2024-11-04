@@ -44,6 +44,15 @@
 ![image](https://github.com/user-attachments/assets/0f96fbe1-6ae2-4504-aae9-67ef558f7399)
   - Solution 🔧: filled the missing entries with '"N/A"' instead. Using string value seems to fix the issue.
 
+***Random Error*** 💀
+```javascript
+C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:202: RuntimeWarning: All-NaN slice encountered
+  vmin = np.nanmin(calc_data)
+C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: All-NaN slice encountered
+  vmax = np.nanmax(calc_data)
+```
+* 
+
 
 
 ## History 📜
