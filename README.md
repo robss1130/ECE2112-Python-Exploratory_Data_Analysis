@@ -14,7 +14,9 @@
     ```javascript
     dataset['key'] = dataset['key'].fillna('N/A')
     ```
-- Apparently, filling the entries with 'N/A' still resulted in the data containing once loaded from a different notebook but different output was printed once I changed it to '"N/A"'. Upon searching the web, 'N/A' and '"N/A"' should both be treated a non null value despite the other being a string value as 'NaN' is distinct from 'N/A'. What seems to be causing this issue is still unknown but is assumed to be due to the version of the spreadsheet file. ❗Note: This line is to be updated once a strong, credible, and appropriate/related information is stumbled upon. 
+- Apparently, filling the entries with 'N/A' still resulted in the data containing once loaded from a different notebook but different output was printed once I changed it to '"N/A"'. Upon searching the web, 'N/A' and '"N/A"' should both be treated a non null value despite the other being a string value as 'NaN' is distinct from 'N/A'. What seems to be causing this issue is still unknown but is assumed to be due to the version of the spreadsheet file. ❗Note: This line is to be updated once a strong, credible, and appropriate/related information is stumbled upon.
+
+- While trying to create and generate some graphs, I stumble an issue where it cannot be fixed. The only way I was able to fix it is by restarting my computer. 
 
 
 ## Challenges 🎯
@@ -51,7 +53,8 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:202: RuntimeWarning: A
 C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: All-NaN slice encountered
   vmax = np.nanmax(calc_data)
 ```
-* 
+* While creating a heatmap for to solve the problem dealing with correlation, I ran to the problem aboved. Despite trying to change the code multiple times, seems like the issue doesn't go away. And upon searching the internet, no solution was given to me.
+  - Solution 🔧: Restart the PC.
 
 
 
@@ -81,3 +84,6 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: A
     cleaned_dataset.loc[574, 'streams'] = 0
     ```
   - Uploaded the updated Data_Cleaning notebook and updated cleaned spreadsheet.
+ 
+  ## References 🔗
+  - Rubin, D. B. (1976). Inference and missing data. Biometrika, 63(3), 581-592. https://doi.org/10.1093/biomet/63.3.581
