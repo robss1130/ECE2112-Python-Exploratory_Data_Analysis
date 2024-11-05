@@ -142,6 +142,75 @@ plt.gca().invert_yaxis()
 plt.show()
 ```
 
+- To get the number of songs released per year and per month, I used:
+```javascript
+cleaned_data['released_year'].value_counts().sort_index()
+cleaned_data['released_month'].value_counts().sort_index()
+```
+- `.value_counts()` counts the frequency or the number of occurences of each unique value in the specified column.
+- `.sort_index()` sorts the results by the index in ascending order.
+
+
+- Then, I generated and used a scatter plot to plot the number of tracks released per year using the following codes:
+```javascript
+plt.figure(figsize=(20, 10))
+plt.subplot(1, 2, 1)
+plt.scatter(yearly_release_counts.index, yearly_release_counts.values, color='b', alpha=0.7, s=100)
+plt.plot(yearly_release_counts.index, yearly_release_counts.values, color='lightblue', linewidth=2)
+plt.title('Trend of Tracks Released Per Year')
+plt.xlabel('Year')
+plt.ylabel('Number of Tracks Released')
+plt.grid(True)
+```
+![image](https://github.com/user-attachments/assets/effc9e9a-3991-43bb-81bc-8329bc9f2c30)
+- `plt.scatter()` creates the scatter plot.
+- `plt.plot()` is responsible for generating a line that connects the points for easier analysis.
+
+
+- Then I generated a bar graph to analyze any pattern for the number of tracks released per month.
+![image](https://github.com/user-attachments/assets/54bd69e9-3bb3-4f4d-9f0c-4c9ccc6a86aa)
+- Code used:
+```javascript
+plt.subplot(1, 2, 2)
+plt.bar(monthly_release_counts.index, monthly_release_counts.values, color='crimson')
+plt.title('Tracks Released Per Month')
+plt.xlabel('Month')
+plt.ylabel('Number of Tracks Released')
+plt.xticks(range(1, 13))  # Months labeled from 1 to 12
+plt.grid(axis='y')
+plt.tight_layout()
+```
+- `plt.tight_layout()` is used to prevent overlapping.
+
+- To compute and observe the correlation between streams and musical attributes, the code responsible for it is:
+```javascript
+correlation_matrix = cleaned_data[attributes].corr()
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='YlOrBr', linewidths=0.5)
+plt.title('Correlation Heatmap of Streams and Musical Attributes')
+plt.show()
+```
+![image](https://github.com/user-attachments/assets/e4d8ebfe-19ab-48f5-9c93-ca6c89962126)
+- `.corr()` calculates the correlation matrix of the specified columns.
+- `sns.heatmap()` basically generates a heatmap.
+
+- To gather data and compare spotify playlist, spotify charts, and apple playlists to each other, the line used is:
+```javascript
+total_spotify_playlists = cleaned_data['in_spotify_playlists'].sum()
+total_spotify_charts = cleaned_data['in_spotify_charts'].sum()
+total_apple_playlists = cleaned_data['in_apple_playlists'].sum()
+```
+- I then use the following line to identify the track with highest stream count to analyze which platform seems to favor the most popular track them most.
+```javascript
+most_popular_track = cleaned_data.loc[cleaned_data['streams'].idxmax()]
+```
+
+- To observe any patterns and gather data for the 'key' of the tracks, I decided to exclude songs with '"N/A"' listed as their key since that is not a key and those songs might not even have the same key at the end. This was performed using:
+```javascript
+filtered_data = cleaned_data[cleaned_data['key'] != '"N/A"']
+```
+- `cleaned_data['key'] != '"N/A"'` is a boolean condition that checks and exlcudes tracks with "N/A".
+- filtered_data will contain all tracks with actual key thanks to '"N/A"' as it assigns filtered dataset with tracks that had a value of true or 'not equal to "N/A".
 
 
 
