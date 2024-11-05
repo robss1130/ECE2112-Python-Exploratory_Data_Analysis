@@ -48,6 +48,7 @@ cleaned_dataset.to_csv(r"C:\Users\PC\Documents\Python Codes\Modules\Incentives\T
 
 
 - Now we move on to the main notebook.
+![image](https://github.com/user-attachments/assets/a2772473-f51a-4282-a76f-78b218b043b8)
 ```javascript
 row_count, column_count = data.shape
 print("The dataset has " + str(row_count) + " rows and " + str(column_count) + " columns.")
@@ -59,23 +60,6 @@ print(data.isnull().sum())
 - `.shape` basically returns two value, the row and column count respectivel. This code basically enables me to see and print the number of rows and columns that the data had.
 - The third line, `.dtypes` is an attribute of Panda that returns a series of data about what type of data each column of the DataFrame had.
 - While the last line of code is used to check if there are any missing values within the DataFrame. `.isnull()` basically checks for missing values in the data frame and returns a boolean value of True if it does detect an NaN.
-
-## Write-up & Insights Gained 🔍
-- When using data files in coding using python, I learned that not all files and encoding methods are compatible which leads to errors when reading files. Upon researching about it, it's because some data uses special characters that may cause issue to the programming language. An example is Python's Pandas lilbrary defaults to UTF-8 encoding, but the spreadsheet file that were using seems to not be compatible therefore I have to use an encoding compatible and chose 'cp1252' which made my code run as long as the data I'll be loading does not contain characters outside the Western European character set. Basically, the data contains special characters that UTF 8 can't read, like some japanese songs that contain japanese charaters thats why the data had to be encoded in something else.
-
-- Upon performing data cleaning, one of the issue that I stumbled upon is creating a line of code that would easily check entries of the data set at which it has a missing value. Prior to this, as I initially performed the activity with unaltered version of the spreadsheet containing some garbage values, I was able to see that 2 columns of the spreadsheet seems to contain missing values. I begun started with the 'in_shazam_carts' column and had no idea how identify missing values. Upon surfing the internet, I came to learn about the `.isna()` code which when used, basically checks for "NaN" values. Checking for "NaN" would be the logical thing to do since the column is specifically catered to numerical values. Hence: `dataset[dataset['in_shazam_charts'].isna()==1]`
-
-- For the songs with duplicates, songs with the same track name and artist name, were simply dropped as they basically just cause issue on the data. Although, I kept the first occurence of the song as upon checking the numbers, it seems that the later occurence were just the outdated data of that songs performance. This was done using `.duplicated(subset=['track_name', 'artist(s)_name'], keep=False)]` where `.duplicated()` basically checks and returns a value of True when a row is duplicated and False if it is unique. `subset=['track_name', 'artist(s)_name']` is basically a parameter to specify which columns to look for duplicate. Lastly, `keep=False` is used in order to mark the first instance of a song with duplicate at later instances to be True, as without it, the compiler seems to instruct to mark songs as a duplicate once it had a first encounter but never include it as a 'duplicate'.
-- `.drop_duplicates(subset=['track_name', 'artist(s)_name'], keep='first')` is used to finally drop the duplicates. `.drop_duplicates` will basically drop those songs that contain the same track name and artist name and to keep the first occurence where `keep='first'` comes into play.
-
-- Prior to this line, it was stated that one of the actions I did in dealing with some unusable values in the spreadsheet was replacing it with a '0'. Moving to the 'key' column, it also contained some missing values. As some songs were missing some keys, I decided to just fill it up with "N/A" or "not applicable" so I ran this:
-    ```javascript
-    dataset['key'] = dataset['key'].fillna('N/A')
-    ```
-- Apparently, filling the entries with 'N/A' still resulted in the data containing once loaded from a different notebook but different output was printed once I changed it to '"N/A"'. Upon searching the web, 'N/A' and '"N/A"' should both be treated a non null value despite the other being a string value as 'NaN' is distinct from 'N/A'. What seems to be causing this issue is still unknown but is assumed to be due to the version of the spreadsheet file. ❗Note: This line is to be updated once a strong, credible, and appropriate/related information is stumbled upon.
-
-- While trying to create and generate some graphs, I stumble an issue where it cannot be fixed. The only way I was able to fix it is by restarting my computer. According to some articles, this may be due to an issue in some of the states of the variable I've initialized. Sometimes, variables are not being reset properly or if previous computations have affected the current state, which can lead to NaN issues. By restarting the PC, the Python reloads all the libraries. It may also be due to the system resources becoming more strained. Hence, restarting the machine fixes the issue.
-![image](https://github.com/user-attachments/assets/a2772473-f51a-4282-a76f-78b218b043b8)
 
 - In getting the mean, the following codes were used:
 ```javascript
@@ -126,6 +110,25 @@ def analyze_trends(column):
 - `sns.displot()` is from seaborn that creates a histogram plot. It allowed us to use the frequency of years.
 - `.idmax()` is a function that returns the index (in this case, the years) of the maximum value or the year with the high count for us to see which is the most common year.
 - `.idmin()` basically does the opposite thing and would return the index with lowest count.
+
+## Write-up & Insights Gained 🔍
+- When using data files in coding using python, I learned that not all files and encoding methods are compatible which leads to errors when reading files. Upon researching about it, it's because some data uses special characters that may cause issue to the programming language. An example is Python's Pandas lilbrary defaults to UTF-8 encoding, but the spreadsheet file that were using seems to not be compatible therefore I have to use an encoding compatible and chose 'cp1252' which made my code run as long as the data I'll be loading does not contain characters outside the Western European character set. Basically, the data contains special characters that UTF 8 can't read, like some japanese songs that contain japanese charaters thats why the data had to be encoded in something else.
+
+- Upon performing data cleaning, one of the issue that I stumbled upon is creating a line of code that would easily check entries of the data set at which it has a missing value. Prior to this, as I initially performed the activity with unaltered version of the spreadsheet containing some garbage values, I was able to see that 2 columns of the spreadsheet seems to contain missing values. I begun started with the 'in_shazam_carts' column and had no idea how identify missing values. Upon surfing the internet, I came to learn about the `.isna()` code which when used, basically checks for "NaN" values. Checking for "NaN" would be the logical thing to do since the column is specifically catered to numerical values. Hence: `dataset[dataset['in_shazam_charts'].isna()==1]`
+
+- For the songs with duplicates, songs with the same track name and artist name, were simply dropped as they basically just cause issue on the data. Although, I kept the first occurence of the song as upon checking the numbers, it seems that the later occurence were just the outdated data of that songs performance. This was done using `.duplicated(subset=['track_name', 'artist(s)_name'], keep=False)]` where `.duplicated()` basically checks and returns a value of True when a row is duplicated and False if it is unique. `subset=['track_name', 'artist(s)_name']` is basically a parameter to specify which columns to look for duplicate. Lastly, `keep=False` is used in order to mark the first instance of a song with duplicate at later instances to be True, as without it, the compiler seems to instruct to mark songs as a duplicate once it had a first encounter but never include it as a 'duplicate'.
+- `.drop_duplicates(subset=['track_name', 'artist(s)_name'], keep='first')` is used to finally drop the duplicates. `.drop_duplicates` will basically drop those songs that contain the same track name and artist name and to keep the first occurence where `keep='first'` comes into play.
+
+- Prior to this line, it was stated that one of the actions I did in dealing with some unusable values in the spreadsheet was replacing it with a '0'. Moving to the 'key' column, it also contained some missing values. As some songs were missing some keys, I decided to just fill it up with "N/A" or "not applicable" so I ran this:
+    ```javascript
+    dataset['key'] = dataset['key'].fillna('N/A')
+    ```
+- Apparently, filling the entries with 'N/A' still resulted in the data containing once loaded from a different notebook but different output was printed once I changed it to '"N/A"'. Upon searching the web, 'N/A' and '"N/A"' should both be treated a non null value despite the other being a string value as 'NaN' is distinct from 'N/A'. What seems to be causing this issue is still unknown but is assumed to be due to the version of the spreadsheet file. ❗Note: This line is to be updated once a strong, credible, and appropriate/related information is stumbled upon.
+
+- While trying to create and generate some graphs, I stumble an issue where it cannot be fixed. The only way I was able to fix it is by restarting my computer. According to some articles, this may be due to an issue in some of the states of the variable I've initialized. Sometimes, variables are not being reset properly or if previous computations have affected the current state, which can lead to NaN issues. By restarting the PC, the Python reloads all the libraries. It may also be due to the system resources becoming more strained. Hence, restarting the machine fixes the issue.
+
+
+
 
 
 
