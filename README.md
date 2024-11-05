@@ -1,12 +1,13 @@
 # ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
 
-# ılıılıılıTable of Contents ılıılıılı
-1. [Jupyter Log & Summary of Codes](##jupyter-log--summary-of-codes) 🌌
-2. [Summary of Answers](#summary-of-answers) 🌌
-3. [Write-up & Insights Gained](#write-up--insights-gained) 🌌
-4. [Challenges](#challenges) 🌌
-5. [History](#history) 🌌
-6. [References](#references) 🌌
+## Table of Contents 📑
+
+1. [Jupyter Log & Summary of Codes](#jupyter-log--summary-of-codes)
+2. [Summary of Answers](#summary-of-answers)
+3. [Write-up & Insights Gained](#write-up--insights-gained)
+4. [Challenges](#challenges)
+5. [History](#history)
+6. [References](#references)
 
 
 
