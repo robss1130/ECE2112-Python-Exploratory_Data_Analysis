@@ -255,15 +255,72 @@ filtered_data = cleaned_data[cleaned_data['key'] != '"N/A"']
 
 
 * Top Performers
-- Which track has the highest number of streams? Display the top 5 most streamed tracks.
+- Which track has the highest number of streams?
   - The track with the highest number of streams is __Blinding Lights by The Weeknd with a stream count of: 3703895074__
+- Display the top 5 most streamed tracks.
   - ![image](https://github.com/user-attachments/assets/b862f6ee-16f4-4586-9641-a183cc5e15c9)
+- Who are the top 5 most frequent artists based on the number of tracks in the dataset?
+  - __The top 5 most frequent artists are:
+Taylor Swift with a number of tracks of: 34
+The Weeknd with a number of tracks of: 21
+SZA with a number of tracks of: 19
+Bad Bunny with a number of tracks of: 19
+Harry Styles with a number of tracks of: 17__
+  - ![image](https://github.com/user-attachments/assets/d3e95bf9-e70f-48f5-a782-85e9896f5aae)
 
+
+* Temporal Trends
+  - Analyze the trends in the number of tracks released over time. Plot the number of tracks released per year.
+    - ![image](https://github.com/user-attachments/assets/f466f3f3-dc3f-49c7-b195-82cc95fe5d38)
+    - ![image](https://github.com/user-attachments/assets/e2d438eb-16c6-4547-aed0-000f2ff9be5d)
+    - __Trend observation__: Seems lik songs became prominent during the 2020's, specially at 2022, with the highest tracks released count of 399.
+  - Does the number of tracks released per month follow any noticeable patterns? Which month sees the most releases?
+    - ![image](https://github.com/user-attachments/assets/b1c953f9-2d73-49ac-8aee-a1d814ac26c4)
+    - Based on the graph, as the so called "Ber Months" occur, songs released over these months gradualy increase then spikes during new year.
+    - Month that sees the highest release is the __1st month__, with a track released count of 134.
+   
+
+*  Genre and Music Characteristics
+  - Examine the correlation between streams and musical attributes like bpm, danceability_%, and energy_%. Which attributes seem to influence streams the most?
+    - ![image](https://github.com/user-attachments/assets/70d75561-c313-4acf-aa8e-8d69e8fc692c)
+    - Based on the results, the attribute that seems to be influencing the streams the most is the __speechiness__ attribute.
+  - Is there a correlation between danceability_% and energy_%? How about valence_% and acousticness_%?
+    - ![image](https://github.com/user-attachments/assets/8e10ce94-1f2b-4bea-9b74-6c453c2e43bc)
+    - Base on the value on the heatmap, the answer to both question is __no__, they don't have a correlation due to having really low correlation coefficient that is below 0.3.
+
+
+* Platform Popularity
+  - How do the numbers of tracks in spotify_playlists, spotify_charts, and apple_playlists compare?
+    - ![image](https://github.com/user-attachments/assets/57aaed25-ef8d-4e59-a6cf-3da323e1f025)
+
+  -  Which platform seems to favor the most popular tracks?
+    - ![image](https://github.com/user-attachments/assets/b802e13c-4acf-4e4f-a325-7ad824dc4a30)
+    - Base on the heatmap, it shows that 'Spotify Playlists' has a strong positive correlation with the stream. Meaning that tracks with higher stream value tends to appear on the said platform. Additionally, 'Blinding Lights', the most popular track, is most present at 'Spotify Playlist'. Once again indicating that the platform favors the most prominent tracks.
+
+
+* Advance Analysis
+  - Based on the streams data, can you identify any patterns among tracks with the same key? 
+    - ![image](https://github.com/user-attachments/assets/d0aaa2c7-16b4-4549-af4d-1ad71a7f12de)
+    - ![image](https://github.com/user-attachments/assets/b151e92f-7dd2-4273-89ad-77474b815304)
+    - ![image](https://github.com/user-attachments/assets/8951afd2-0b06-41e1-a36d-43b3af6f235e)
+    - Trends: According to the results, tracks that are typically produced are usually in the key of C#, G, and F. Then C# leads the 2nd graph with the highest total number of streams, which is then followed by G, then G#. Lastly, It is just logical to assume that C# would also have the highest mean streams, suggesting that it must be the most popular key among listeners. This is then followed by E then D# tracks.
+  
+  - Based on the streams data, can you identify any patterns among tracks with the same mode (Major vs. Minor)?
+    - ![image](https://github.com/user-attachments/assets/87533b2a-1bbd-4912-94cc-b9374639b018)
+    - ![image](https://github.com/user-attachments/assets/187ebadd-72fa-4e57-8d53-29bac404a026)
+    - ![image](https://github.com/user-attachments/assets/f6b9d102-0fe9-4ae6-adad-ec54515efe3f)
+    - Based on the graphs, more tracks are made in minor. Minor tracks also have the highest stream count. No difference when comparing their mean also.
+
+  - Do certain genres or artists consistently appear in more playlists or charts? Perform an analysis to compare the most frequently appearing artists in playlists or charts.
+    - ![image](https://github.com/user-attachments/assets/a5c81c8c-884b-41a6-8a25-be8007dc102a)
+    - ![image](https://github.com/user-attachments/assets/2d520731-0d35-469f-8a31-3319369013be)
+    - According to the graph, multiple artist do appear frequently in both playlists and occurences, with the likes of Ed Sheeran and Harry Styles. But the two most evident artist would be Taylor Swift and The Weekend, which literally just switch places across charts and playlists.
 
 
 
 
   
+
 
 
 ## Write-up & Insights Gained 🔍
