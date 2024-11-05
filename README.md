@@ -113,6 +113,38 @@ def analyze_trends(column):
 - `.idmax()` is a function that returns the index (in this case, the years) of the maximum value or the year with the high count for us to see which is the most common year.
 - `.idmin()` basically does the opposite thing and would return the index with lowest count.
 
+- To get the highest streamed tracks as well as the most frequent artists according to their number of tracks, I use the following lines:
+```javascript
+cleaned_data[['track_name', 'artist(s)_name', 'streams']].sort_values(by='streams', ascending=False).head(5)
+top_artists = cleaned_data['artist(s)_name'].value_counts().head(5)
+```
+- `.sort_values()` functions to sort the data based on one or more columns
+- `by='streams'` sorts the rows based on the values in the 'stream' column.
+- `ascending=False` means that the sort will be in descending order, so that the highest stream counts will pop up first.
+- `.head(5)` allows to select the top 5 rows from the dataset.
+- `.value_counts()` counts the occurences of each unique value.
+
+![image](https://github.com/user-attachments/assets/32fe73f7-9215-41e1-b96f-9163b1284f18) ![image](https://github.com/user-attachments/assets/2195b201-1d39-48ee-95d7-e6bf17dde469)
+- I then decided to generate them using bar graph for better visualization using the values gathered prior to this line. Code used to generate the bar graphs are:
+```javascript
+plt.figure(figsize=(12, 8))
+plt.barh(top_artists.index, top_artists.values, color='salmon')
+plt.xlabel('Number of Tracks')
+plt.title('Top 5 Most Frequent Artists')
+plt.gca().invert_yaxis()
+plt.show()
+
+plt.figure(figsize=(12, 8))
+plt.barh(top_streamed_tracks['track_name'] + " by " + top_streamed_tracks['artist(s)_name'], top_streamed_tracks['streams'], color='skyblue')
+plt.xlabel('Streams (in Billions)')
+plt.title('Top 5 Most Streamed Tracks')
+plt.gca().invert_yaxis()
+plt.show()
+```
+
+
+
+
 ## Write-up & Insights Gained 🔍
 - When using data files in coding using python, I learned that not all files and encoding methods are compatible which leads to errors when reading files. Upon researching about it, it's because some data uses special characters that may cause issue to the programming language. An example is Python's Pandas lilbrary defaults to UTF-8 encoding, but the spreadsheet file that were using seems to not be compatible therefore I have to use an encoding compatible and chose 'cp1252' which made my code run as long as the data I'll be loading does not contain characters outside the Western European character set. Basically, the data contains special characters that UTF 8 can't read, like some japanese songs that contain japanese charaters thats why the data had to be encoded in something else.
 
