@@ -1,6 +1,8 @@
 # ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
 
 
+## Jupyter Log 🪐
+
 
 ## Write-up & Insights Gained 🔍
 - When using data files in coding using python, I learned that not all files and encoding methods are compatible which leads to errors when reading files. Upon researching about it, it's because some data uses special characters that may cause issue to the programming language. An example is Python's Pandas lilbrary defaults to UTF-8 encoding, but the spreadsheet file that were using seems to not be compatible therefore I have to use an encoding compatible and chose 'cp1252' which made my code run as long as the data I'll be loading does not contain characters outside the Western European character set. Basically, the data contains special characters that UTF 8 can't read, like some japanese songs that contain japanese charaters thats why the data had to be encoded in something else.
