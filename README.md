@@ -89,6 +89,11 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: A
   - Major addition of codes.
   - Newly generated graphs were added to answer and present some questions of the guide question.
   - Simplified some codes to remove redundancy.
+
+ * Version 4.0 (11/05/24) [Final Version]
+   - Final version of notebook.
+   - Included all data possible to answer guide question.
+   - Debug some codes causing errors.
  
   ## References 🔗
   - Rubin, D. B. (1976). Inference and missing data. Biometrika, 63(3), 581-592. - [https://doi.org/10.1093/biomet/63.3.581](https://sci-hub.st/10.1093/biomet/63.3.581)
