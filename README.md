@@ -213,6 +213,52 @@ filtered_data = cleaned_data[cleaned_data['key'] != '"N/A"']
 - filtered_data will contain all tracks with actual key thanks to '"N/A"' as it assigns filtered dataset with tracks that had a value of true or 'not equal to "N/A".
 
 
+## Summary of Answers 📝
+*Guide Questions
+
+* Overview of Dataset
+- How many rows and columns does the dataset contain?
+  - ![image](https://github.com/user-attachments/assets/53deb701-e76a-412b-bfee-11fc4e7cee8b)
+  - Originally, the dataset contains __953 rows__ and __24 columns__.
+  - ![image](https://github.com/user-attachments/assets/1e400562-faba-4417-a689-b4d88898b25e)
+  - But my cleaned dateset lost 4 rows due to duplicates and therefore had __949 rows__ and __24 columns__.
+
+
+* Basic Descriptive Statistics
+- What are the data types of each column?
+  - ![image](https://github.com/user-attachments/assets/030fb40c-9f39-45da-be0e-35f03cbf4c11)
+- Are there any missing values?
+  - ![image](https://github.com/user-attachments/assets/109ab20f-6c7b-4af4-8712-4c0c8f24499f)
+  - __Yes__. The dataset did contain missing values. 50 missing at shazam charts column and 95 at the key column.
+ 
+- What are the mean, median, and standard deviation of the streams column?
+  - ![image](https://github.com/user-attachments/assets/4704a0b0-5000-4418-b4e6-44aceda9e75a)
+  - Mean: __513476285.8651212__
+  - Median: __287278853__
+  - Standard Deviation: __567873302.7109758__
+- What is the distribution of released_year and artist_count? Are there any noticeable trends or outliers?
+  - ![image](https://github.com/user-attachments/assets/c0723f76-e7da-4857-94c7-8ec2fc2e1c07)
+ 
+  - ![image](https://github.com/user-attachments/assets/3ca14701-8450-4852-a3ef-7f1bb2ab4297)
+
+  - I basically used a box plot in order to easily observe outliers.
+  - The circles outside of the whiskers are the outliers. Hence, __there are outliers__.
+  - __Number of outliers in 'released_year': 151__
+  - __Number of outliers in 'artist_count': 27__
+  - __Trends__: Based on the graph, most stream spotify songs are mostly around the 2020's. Songs produced with   respect to the number of artist are usually around 1 or 2. Its pretty rare for songs to be produced by 4 or more than artists. Also, the year with most releases is 2022 with 402 occurences and the year with the least release is 1930 with 1 song released.
+
+
+* Top Performers
+- Which track has the highest number of streams? Display the top 5 most streamed tracks.
+  - The track with the highest number of streams is __Blinding Lights by The Weeknd with a stream count of: 3703895074__
+  - ![image](https://github.com/user-attachments/assets/b862f6ee-16f4-4586-9641-a183cc5e15c9)
+
+
+
+
+
+  
+
 
 ## Write-up & Insights Gained 🔍
 - When using data files in coding using python, I learned that not all files and encoding methods are compatible which leads to errors when reading files. Upon researching about it, it's because some data uses special characters that may cause issue to the programming language. An example is Python's Pandas lilbrary defaults to UTF-8 encoding, but the spreadsheet file that were using seems to not be compatible therefore I have to use an encoding compatible and chose 'cp1252' which made my code run as long as the data I'll be loading does not contain characters outside the Western European character set. Basically, the data contains special characters that UTF 8 can't read, like some japanese songs that contain japanese charaters thats why the data had to be encoded in something else.
