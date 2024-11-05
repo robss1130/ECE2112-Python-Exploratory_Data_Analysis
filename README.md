@@ -1,5 +1,20 @@
 # ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
 
+# ılıılıılıTable of Contents ılıılıılı
+1. [Jupyter Log & Summary of Codes](#jupyter-log--summary-of-codes) 🌌
+2. [Summary of Answers](#summary-of-answers) 🌌
+3. [Write-up & Insights Gained](#write-up--insights-gained) 🌌
+4. [Challenges](#challenges) 🌌
+5. [History](#history) 🌌
+6. [References](#references) 🌌
+
+
+
+
+
+
+
+
 
 ## Jupyter Log 🪐  &  Summary of Codes 👨🏻‍💻
 - First and foremost, we load the libraries.
@@ -436,6 +451,6 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: A
 
 
  
-  ## References 🔗
+## References 🔗
   - Rubin, D. B. (1976). Inference and missing data. Biometrika, 63(3), 581-592. - [https://doi.org/10.1093/biomet/63.3.581](https://sci-hub.st/10.1093/biomet/63.3.581)
   - Ghosh, S. (2020, May 21). Data science basics with Python: A full code guide. Medium. https://medium.com/@siladityaghosh/data-science-basics-with-python-a-full-code-guide-4bf62148071a
