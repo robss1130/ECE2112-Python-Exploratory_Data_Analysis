@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/c30e81c5-b1b7-4835-a36b-634e938b560f)# ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
+# ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
 
 
 ## Jupyter Log 🪐  &  Summary of Codes 👨🏻‍💻
