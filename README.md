@@ -48,7 +48,9 @@ cleaned_dataset.to_csv(r"C:\Users\PC\Documents\Python Codes\Modules\Incentives\T
 
 
 - Now we move on to the main notebook.
+  
 ![image](https://github.com/user-attachments/assets/a2772473-f51a-4282-a76f-78b218b043b8)
+
 ```javascript
 row_count, column_count = data.shape
 print("The dataset has " + str(row_count) + " rows and " + str(column_count) + " columns.")
