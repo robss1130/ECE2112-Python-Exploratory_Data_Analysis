@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dfe0b538-3da5-4bee-a89a-30de8ef9cd4e)# ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
+![image](https://github.com/user-attachments/assets/c30e81c5-b1b7-4835-a36b-634e938b560f)# ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
 
 
 ## Jupyter Log 🪐  &  Summary of Codes 👨🏻‍💻
@@ -47,6 +47,19 @@ cleaned_dataset.to_csv(r"C:\Users\PC\Documents\Python Codes\Modules\Incentives\T
 - Is the line used to basically save the new and clean data to a specific path.
 
 
+- Now we move on to the main notebook.
+```javascript
+row_count, column_count = data.shape
+print("The dataset has " + str(row_count) + " rows and " + str(column_count) + " columns.")
+
+print(data.dtypes)
+
+print(data.isnull().sum())
+```
+- `.shape` basically returns two value, the row and column count respectivel. This code basically enables me to see and print the number of rows and columns that the data had.
+- The third line, `.dtypes` is an attribute of Panda that returns a series of data about what type of data each column of the DataFrame had.
+- While the last line of code is used to check if there are any missing values within the DataFrame. `.isnull()` basically checks for missing values in the data frame and returns a boolean value of True if it does detect an NaN.
+
 ## Write-up & Insights Gained 🔍
 - When using data files in coding using python, I learned that not all files and encoding methods are compatible which leads to errors when reading files. Upon researching about it, it's because some data uses special characters that may cause issue to the programming language. An example is Python's Pandas lilbrary defaults to UTF-8 encoding, but the spreadsheet file that were using seems to not be compatible therefore I have to use an encoding compatible and chose 'cp1252' which made my code run as long as the data I'll be loading does not contain characters outside the Western European character set. Basically, the data contains special characters that UTF 8 can't read, like some japanese songs that contain japanese charaters thats why the data had to be encoded in something else.
 
@@ -62,6 +75,58 @@ cleaned_dataset.to_csv(r"C:\Users\PC\Documents\Python Codes\Modules\Incentives\T
 - Apparently, filling the entries with 'N/A' still resulted in the data containing once loaded from a different notebook but different output was printed once I changed it to '"N/A"'. Upon searching the web, 'N/A' and '"N/A"' should both be treated a non null value despite the other being a string value as 'NaN' is distinct from 'N/A'. What seems to be causing this issue is still unknown but is assumed to be due to the version of the spreadsheet file. ❗Note: This line is to be updated once a strong, credible, and appropriate/related information is stumbled upon.
 
 - While trying to create and generate some graphs, I stumble an issue where it cannot be fixed. The only way I was able to fix it is by restarting my computer. According to some articles, this may be due to an issue in some of the states of the variable I've initialized. Sometimes, variables are not being reset properly or if previous computations have affected the current state, which can lead to NaN issues. By restarting the PC, the Python reloads all the libraries. It may also be due to the system resources becoming more strained. Hence, restarting the machine fixes the issue.
+![image](https://github.com/user-attachments/assets/a2772473-f51a-4282-a76f-78b218b043b8)
+
+- In getting the mean, the following codes were used:
+```javascript
+mean_streams = cleaned_data[x].mean()
+median_streams = cleaned_data[x].median()
+standard_streams = cleaned_data[x].std()
+```
+- This one is very self explanatory, `.mean()` `.median()` and `.std`, basically computes for the average, median, and standard deviation of column `x` (which is what I set the 'streams` column) respectively. Those values are then stored on another variable.
+
+![image](https://github.com/user-attachments/assets/9150f636-3397-4c37-b482-41db15b7f288)
+- I also decided to plot this on a boxplot since boxplot have whiskers that would easily allow you to see outliers. Code used was:
+```javascript
+fig, axes = plt.subplots(1, 2, figsize=(15, 6))
+
+axes[0].boxplot(cleaned_data['released_year'], vert=False, widths=0.7, patch_artist=True)
+axes[0].set_title('Distribution of Released Year')
+axes[0].set_xlabel('Year')
+
+axes[1].boxplot(cleaned_data['artist_count'], vert=False, widths=0.7, patch_artist=True)
+axes[1].set_title('Distribution of Artist Count')
+axes[1].set_xlabel('Number of Artists')
+
+plt.show()
+```
+- `plt.subplots(1, 2, figsize=(15, 6))` creates 2 subplots in a single row with a custom figure size.
+- `axes[0].boxplot()     axes[1].boxplot()` basically creates a horizontal box plot for the columns of year of releas and artist count.
+- The others are just parameters to set labels and title.
+
+![image](https://github.com/user-attachments/assets/69dde4cb-5f92-4d20-8044-21e312a7a005)
+- In generating the graph for trend analysis for distribution of released_year and artist_count, I used:
+```javascript
+def analyze_trends(column):
+    trend_data = data[column].value_counts().sort_index()
+    trend_df = trend_data.reset_index()
+    trend_df.columns = [column, 'Count']
+    sns.displot(
+        trend_df, x=column, weights='Count', kde=True, bins=len(trend_df), color='purple',
+        height=8, aspect=1.5)
+    plt.title('Trend Analysis of {} Over Time'.format(column), fontsize=16)
+    plt.xlabel(column, fontsize=14)
+    plt.ylabel('Count', fontsize=14)
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
+    plt.show()
+```
+- `.value_counts()` calculates the frequency of each unique value in the specified column.
+- `.sort_index()` sorts the data by the index. I used this to make sure the years are in chronological order and make things easier to read and analyze.
+- `sns.displot()` is from seaborn that creates a histogram plot. It allowed us to use the frequency of years.
+- `.idmax()` is a function that returns the index (in this case, the years) of the maximum value or the year with the high count for us to see which is the most common year.
+- `.idmin()` basically does the opposite thing and would return the index with lowest count.
+
 
 
 ## Challenges 🎯
