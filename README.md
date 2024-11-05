@@ -1,7 +1,7 @@
 # ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
 
 # ılıılıılıTable of Contents ılıılıılı
-1. [Jupyter Log & Summary of Codes](#jupyter-log--summary-of-codes) 🌌
+1. [Jupyter Log & Summary of Codes](##jupyter-log--summary-of-codes) 🌌
 2. [Summary of Answers](#summary-of-answers) 🌌
 3. [Write-up & Insights Gained](#write-up--insights-gained) 🌌
 4. [Challenges](#challenges) 🌌
