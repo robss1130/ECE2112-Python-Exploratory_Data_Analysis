@@ -1,7 +1,50 @@
-# ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
+![image](https://github.com/user-attachments/assets/dfe0b538-3da5-4bee-a89a-30de8ef9cd4e)# ECE2112-Python-Exploratory_Data_Analysis 📊📈🗃️🐍
 
 
-## Jupyter Log 🪐
+## Jupyter Log 🪐  &  Summary of Codes 👨🏻‍💻
+- First and foremost, we load the libraries.
+```javascript
+#Import the libraries that contains the necessary functions for the problem
+import numpy as np #For numerical operations and handling large arrays or matrices of data efficiently.
+import pandas as pd #For data manipulation capabilities once we loaded in the spotify data
+import seaborn as sns # For advanced data visualization
+import matplotlib.pyplot as plt # For general-purpose data visualization,
+```
+
+- Then, in order to load the script, I use:
+```javascript
+new_path = r"C:\Users\PC\Documents\Python Codes\Modules\Incentives\Top Spotify Music Incentives\spotify-2023-(uncleaned).csv"
+dataset = pd.read_csv(new_path, encoding='cp1252')
+```
+- This first line of assigns the file path of the spreadsheet. I did this since the file sometimes wouldn't load in properly so I just assign a new directory where all datas for the project will be kept. While the second line is a Pandas function used to read a CSV file and load it into the variable I initialized. Additionally, I used 'cp1252' to encode the file when loading it since it contains special characters outside of the regular english alphabet.
+
+- First, this segment of the documentation would focus on the Data_Cleaning.ipynb notebook since I performed data cleaning on the spreadsheet which is what the main data of the EDA_Spotify2023.ipynb (main notebook).
+```javascript
+dataset.isnull()
+```
+- `.isnull` is a Panda function that detects for any cells or entries with missing values and returns a boolean value (True, if the data has missing value. Otherwise, it returns False).
+
+
+![image](https://github.com/user-attachments/assets/8ff0e101-063e-49f7-8197-a2261c677374)
+- Based on the image from above, my data did contain some missing values. To deal with it, I used:
+```javascript
+dataset['in_shazam_charts'] = dataset['in_shazam_charts'].fillna(0)
+dataset['key'] = dataset['key'].fillna('"N/A"')
+```
+- These two codes basically does the same thing and that is to detect missing values at the entry of the column of 'in_shazam_charts' and 'key'. To not waste any data, I decided not to drop the row to keep the other values as they might become valueable at later instances. The `.fillna(x)` will instead fill empty entries with '0' and '"N/A"' for the Shazam Charts and key column respectively.
+
+- Moving on from missing values, we now have to deal with duplicates. I noticed that some songs had duplicates at later instances of the data and those data seems like are just outdated data, having almost the same data but lower in value just a little.
+```javascript
+duplicate_songs = dataset[dataset.duplicated(subset=['track_name', 'artist(s)_name'], keep=False)]
+cleaned_dataset = dataset.drop_duplicates(subset=['track_name', 'artist(s)_name'], keep='first')
+```
+- The first line, `.duplicated()` basically checks if a row will have a duplicate and returns a boolean value of 'True' if it did. The `keep=False` basically ensures that the first instance will be marked as True since the said code prior to this only marks the later instances of duplicate as true which makes detecting duplicates harder.
+- Meanwhile, the next line is basically used to drop the duplicates. `.drop_dupliocates()` is self explanatory, `keep='first'` is used to keep the first instance of the duplicate.
+
+```javascript
+cleaned_dataset.to_csv(r"C:\Users\PC\Documents\Python Codes\Modules\Incentives\Top Spotify Music Incentives\Spotify_2023_(Cleaned).csv", index=False, encoding='cp1252')
+```
+- Is the line used to basically save the new and clean data to a specific path.
 
 
 ## Write-up & Insights Gained 🔍
