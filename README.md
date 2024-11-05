@@ -213,6 +213,12 @@ filtered_data = cleaned_data[cleaned_data['key'] != '"N/A"']
 - filtered_data will contain all tracks with actual key thanks to '"N/A"' as it assigns filtered dataset with tracks that had a value of true or 'not equal to "N/A".
 
 
+
+
+
+
+
+
 ## Summary of Answers 📝
 *Guide Questions
 
@@ -281,6 +287,8 @@ filtered_data = cleaned_data[cleaned_data['key'] != '"N/A"']
 
 
 
+
+
 ## Challenges 🎯
 ***Missing Values and Duplicates***❓
 * Since the Dataset contains duplicates and missing values, proceeding beyond "Basic Descriptive Statistics" becomes tricky. Must be able to find a way to find mean, mode, standard deviation whilst dealing with missing values.
@@ -320,6 +328,11 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: A
 
 
 
+
+
+
+
+
 ## History 📜
 * Version 1.0 (11/02/24)
   - Initial commit of the notebook.
@@ -356,6 +369,13 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: A
    - Final version of notebook.
    - Included all data possible to answer guide question.
    - Debug some codes causing errors.
+
+
+
+
+
+
+
  
   ## References 🔗
   - Rubin, D. B. (1976). Inference and missing data. Biometrika, 63(3), 581-592. - [https://doi.org/10.1093/biomet/63.3.581](https://sci-hub.st/10.1093/biomet/63.3.581)
