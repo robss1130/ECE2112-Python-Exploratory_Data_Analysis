@@ -422,10 +422,12 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: A
   - Newly generated graphs were added to answer and present some questions of the guide question.
   - Simplified some codes to remove redundancy.
 
- * Version 4.0 (11/05/24) [Final Version]
-   - Final version of notebook.
+* Version 4.0 (11/05/24)
    - Included all data possible to answer guide question.
    - Debug some codes causing errors.
+   
+* Version 4.1 (11/06/24) [Final Version]
+   - Made some adjustments on some codes and comments.
 
 
 
