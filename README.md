@@ -5,10 +5,10 @@
 - First and foremost, we load the libraries.
 ```javascript
 #Import the libraries that contains the necessary functions for the problem
-import numpy as np #For numerical operations and handling large arrays or matrices of data efficiently.
+import numpy as np #For numerical operations and handling large arrays or matrices of data efficiently
 import pandas as pd #For data manipulation capabilities once we loaded in the spotify data
 import seaborn as sns # For advanced data visualization
-import matplotlib.pyplot as plt # For general-purpose data visualization,
+import matplotlib.pyplot as plt # For general-purpose data visualization
 ```
 
 - Then, in order to load the script, I use:
