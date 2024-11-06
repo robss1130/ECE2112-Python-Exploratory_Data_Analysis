@@ -435,7 +435,7 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: A
  
 * Version 3.0 (11/05/24)
   - Major addition of codes.
-  - Newly generated graphs were added to answer and present some questions of the guide question.
+  - Newly generated graphs were added to present and answer some questions of the guide question.
   - Simplified some codes to remove redundancy.
 
 * Version 4.0 (11/05/24)
