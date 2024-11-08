@@ -396,7 +396,7 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:202: RuntimeWarning: A
 C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: All-NaN slice encountered
   vmax = np.nanmax(calc_data)
 ```
-* While creating a heatmap for to solve the problem dealing with correlation, I ran to the problem aboved. Despite trying to change the code multiple times, seems like the issue doesn't go away. And upon searching the internet, no solution was given to me.
+* While creating a heatmap in order to solve the problem dealing with correlation, I ran to the problem aboved. Despite trying to change the code multiple times, seems like the issue doesn't go away. And upon searching the internet, no solution was given to me.
   - Solution 🔧: Restart the PC.
 
 
