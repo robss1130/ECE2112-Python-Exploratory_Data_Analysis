@@ -454,3 +454,8 @@ C:\Users\PC\anaconda3\Lib\site-packages\seaborn\matrix.py:207: RuntimeWarning: A
 ## References 🔗
   - Rubin, D. B. (1976). Inference and missing data. Biometrika, 63(3), 581-592. - [https://doi.org/10.1093/biomet/63.3.581](https://sci-hub.st/10.1093/biomet/63.3.581)
   - Ghosh, S. (2020, May 21). Data science basics with Python: A full code guide. Medium. https://medium.com/@siladityaghosh/data-science-basics-with-python-a-full-code-guide-4bf62148071a
+
+
+## Author ✍️
+  - Robie Galang
+  - If you have any feedback or concerns, please reach out to me via email at hpny45@gmail.com
