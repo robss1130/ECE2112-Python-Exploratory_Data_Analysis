@@ -305,11 +305,10 @@ Harry Styles with a number of tracks of: 17__
 
 
 * Platform Popularity
-  - ![image](https://github.com/user-attachments/assets/8e10ce94-1f2b-4bea-9b74-6c453c2e43bc)
   - How do the numbers of tracks in spotify_playlists, spotify_charts, and apple_playlists compare?
     - ![image](https://github.com/user-attachments/assets/57aaed25-ef8d-4e59-a6cf-3da323e1f025)
-
   -  Which platform seems to favor the most popular tracks?
+    - ![image](https://github.com/user-attachments/assets/8e10ce94-1f2b-4bea-9b74-6c453c2e43bc)
     - ![image](https://github.com/user-attachments/assets/b802e13c-4acf-4e4f-a325-7ad824dc4a30)
     - Base on the heatmap, it shows that 'Spotify Playlists' has a strong positive correlation with the stream. Meaning that tracks with higher stream value tends to appear on the said platform. Additionally, 'Blinding Lights', the most popular track, is most present at 'Spotify Playlist'. Once again indicating that the platform favors the most prominent tracks.
 
