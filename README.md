@@ -301,11 +301,11 @@ Harry Styles with a number of tracks of: 17__
     - ![image](https://github.com/user-attachments/assets/70d75561-c313-4acf-aa8e-8d69e8fc692c)
     - Based on the results, the attribute that seems to be influencing the streams the most is the __speechiness__ attribute.
   - Is there a correlation between danceability_% and energy_%? How about valence_% and acousticness_%?
-    - ![image](https://github.com/user-attachments/assets/8e10ce94-1f2b-4bea-9b74-6c453c2e43bc)
     - Base on the value on the heatmap, the answer to both question is __no__, they don't have a correlation due to having really low correlation coefficient that is below 0.3.
 
 
 * Platform Popularity
+  - ![image](https://github.com/user-attachments/assets/8e10ce94-1f2b-4bea-9b74-6c453c2e43bc)
   - How do the numbers of tracks in spotify_playlists, spotify_charts, and apple_playlists compare?
     - ![image](https://github.com/user-attachments/assets/57aaed25-ef8d-4e59-a6cf-3da323e1f025)
 
